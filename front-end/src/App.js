@@ -1,14 +1,19 @@
-import React from 'react'
-import {Route, Routes, Outlet} from 'react-router-dom';
-import './App.css';
-import { Box } from '@mui/material';
+import React from 'react';
+import { BrowserRouter  as Router, Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
-function Web() {
-  return (
-    <Box width="400px" sx= {{ width: { xl: '1488px' }}} m = "auto">
-       <Route path="/" element={<Home />} />
-    </Box>
-  );  
-}
 
-export default Web
+function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        {/* Add more routes here */}
+      </Routes>
+    </Router>
+  );
+}
+function About() {
+  return <h1>About Page</h1>;
+}
+export default App;
