@@ -1,0 +1,92 @@
+.background-Login {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('.\\asset\\back_ground.jpeg'); 
+    background-size: cover;
+    background-position: center; 
+    z-index: -1; 
+}
+.Signup-formbox{
+    height: 650px;
+    width: 400px;
+    background-color: rgba(255, 255, 255, 0);
+    position: absolute;
+    display: flex;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgb(255, 255, 255);
+    box-shadow: 0 0 40px rgba(8,7,16,0.6);
+    padding: 50px 35px;
+  }
+  .Login-formbox{
+    height: 550px;
+    width: 400px;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0);
+    position: relative;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgb(255, 255, 255);
+    box-shadow: 0 0 40px rgba(8,7,16,0.6);
+    padding: 50px 35px;
+  }
+  .input-group{
+    top: 70px;
+    justify-content: center;
+    position: absolute;
+    width: 280px;
+    transition: .5s;
+  }
+  .heading {
+    text-align: center;
+    color: #f1f0f3;
+    font-weight: bolder;  
+    position:absolute;
+    top: 10px; 
+    width: 80%;
+  }
+  .submit-button {
+    margin-top: 50px;
+    align-self: center;
+    width: 100%;
+    background-color: #3abd3a;
+    color: #ffffff;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 10px;
+  }
+.input-form{
+    display: block;
+    height: 50px;
+    width: 100%;
+    border-radius: 5px;
+    margin-top: 4px;
+    font-size: 14px;
+    font-weight: 300;
+}
+::placeholder{
+    color: #000000;
+}
+input{
+    color: rgb(0, 0, 0);
+  }
+
+.Lable{
+    display: block;
+    margin-top: 40px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #000000;
+}
