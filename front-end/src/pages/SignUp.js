@@ -61,14 +61,14 @@ const SignUp = () => {
                         {successMessage}
                     </Typography>
                 )}
-                <Typography color='green' fontSize={'24px'}>Create new account</Typography>
+                <Typography color='green' fontSize={'24px'}>Tạo Tài Khoản Mới</Typography>
                 <Stack alignItems={'center'}>
                     <form onSubmit={handleSubmit} className='input-group'>
                         <Stack>
                             <label className='Lable'>
-                                Username:
+                                Tên:
                                 <input
-                                    placeholder="Enter Username"
+                                    placeholder="Nhập tên"
                                     name="name"
                                     value={formData.name}
                                     onChange={handleChange}
@@ -81,7 +81,7 @@ const SignUp = () => {
                             <label className='Lable'>
                                 Email:
                                 <input
-                                    placeholder="Enter Email"
+                                    placeholder="Nhập địa chỉ Email"
                                     name="email"
                                     value={formData.email}
                                     onChange={handleChange}
@@ -92,9 +92,9 @@ const SignUp = () => {
                         </Stack>
                         <Stack>
                             <label className='Lable'>
-                                Password:
+                                Mật Khẩu:
                                 <input
-                                    placeholder="Password"
+                                    placeholder="Nhập mật khẩu"
                                     name="password"
                                     value={formData.password}
                                     onChange={handleChange}
