@@ -9,4 +9,4 @@ function Product_Detail   (){
         </div>
     )
 }
-export default Product_Detail
+export default Product_Detail;

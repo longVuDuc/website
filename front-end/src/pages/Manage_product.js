@@ -9,4 +9,4 @@ function Mangage_product   (){
         </div>
     )
 }
-export default Mangage_product
+export default Mangage_product;

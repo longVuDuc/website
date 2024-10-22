@@ -9,4 +9,4 @@ function Product  (){
         </div>
     )
 }
-export default Product
+export default Product;
