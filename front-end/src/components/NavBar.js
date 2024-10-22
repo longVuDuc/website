@@ -30,7 +30,7 @@ const ResponsiveAppBar = () => {
                         </Box>
                         <Box display={'flex'} alignContent={"center"} mr={'5%'}>
                             {
-                                localStorage.getItem('user-info')?
+                                localStorage.getItem('token')?
                                 <>
                                 <Box display="flex" alignItems="center">
                                     <Link to="/Profile">

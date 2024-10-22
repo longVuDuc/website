@@ -1,70 +1,74 @@
 import React, { useState } from 'react';
-import { Stack, Typography, Box, colors } from '@mui/material';
-// import axios from 'axios';
-import { Link } from 'react-router-dom';
-// import { useAuth } from "../utils/userAuth";
+import { Stack, Typography, Box } from '@mui/material';
+import axios from 'axios';
+import { Link, useNavigate } from 'react-router-dom';
 import '../App.css';
+
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-//   const [errorMessage, setErrorMessage] = useState('');
-//   const { login } = useAuth();
-//   const handleSubmit = async (e) => {
-//     e.preventDefault();
-//     const loginUrl = 'http://localhost:8000/login';
-//     const data = new URLSearchParams({
-//       grant_type: 'password',
-//       username: email,
-//       password: password,
-//     });
-//     const headers = { 'Content-Type': 'application/x-www-form-urlencoded' };
+  const [errorMessage, setErrorMessage] = useState('');
+  const navigate = useNavigate();
 
-//     try {
-//       const response = await axios.post(loginUrl, data, { headers });
-//       const responseData = response.data.access_token;
-//       await login({ responseData });
-//     } catch (error) {
-//       setErrorMessage(error.response?.data?.detail || 'Login failed');
-//     }
-//   };
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const loginUrl = 'http://localhost:8000/api/login';
+    const data = new URLSearchParams({
+      grant_type: 'password',
+      username: email,
+      password: password,
+    });
+    const headers = { 'Content-Type': 'application/x-www-form-urlencoded' };
+
+    try {
+      const response = await axios.post(loginUrl, data, { headers });
+      const token = response.data.access_token;
+
+      localStorage.setItem('token', token);
+
+    
+      navigate('/'); 
+    } catch (error) {
+      setErrorMessage(error.response?.data?.detail || 'Login failed');
+    }
+  };
 
   return (
     <Stack className="background-Login">
       <Stack className='Login-formbox'>
-        {/* <Typography className='heading' fontSize={'24px'}>Login now</Typography>
+        <Typography className='heading' fontSize={'24px'}>Login now</Typography>
         {errorMessage && (
           <Typography color="red" fontSize="20px">
             {errorMessage}
           </Typography>
-        )} */}
+        )}
         <Stack alignItems={'center'}>
-          {/* <form onSubmit={handleSubmit} className='input-group'> */}
+          
           <Typography color='green' fontSize={'32px'}>
-            Log In
+              Đăng Nhập
           </Typography>
-          <form className='input-group'>
+          <form onSubmit={handleSubmit} className='input-group'>
             <Stack>
               <label className='Lable'>
-                Username or Email:
+                Email:
                 <input
-                  placeholder="Username or Email"
+                  placeholder="Nhập địa chỉ email"
                   name="username"
                   value={email}
-                //   onChange={(e) => setEmail(e.target.value)}
+                  onChange={(e) => setEmail(e.target.value)}
                   type="text"
                   className='input-form'
-                  color='white'
                 />
               </label>
             </Stack>
             <Stack>
               <label className='Lable'>
-                Password:
+                Mật Khẩu:
                 <input
-                  placeholder="Password"
+                  placeholder="Nhập mật khẩu"
                   name="password"
                   value={password}
-                //   onChange={(e) => setPassword(e.target.value)}
+                  onChange={(e) => setPassword(e.target.value)}
                   type="password"
                   className='input-form'
                 />

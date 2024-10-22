@@ -14,7 +14,8 @@ class UserAccountController extends Controller
         $user->email = $request->input("email");
         $user->password = Hash::make($request->input("password"));
         $user->save();  
-        return $user;
+        $token = $user->createToken('website')->plainTextToken;
+        return $token;
     }
     function login(request $request)
     {
@@ -22,8 +23,7 @@ class UserAccountController extends Controller
         if (!$user ||  !Hash::check($request->input("password"), $user->password)) {
             return ["error" => "Email or password is not matched"];
         }
-        return $user;
-
-        
+        $token = $user->createToken('website')->plainTextToken;
+        return $token;
     }
 }
