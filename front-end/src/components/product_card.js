@@ -15,7 +15,7 @@ const ProductCard = ({ product }) => {
 
     if (!product) return null; 
     return (
-        <Link to={`/product/${product.id}`} style={{ textDecoration: 'none' }}>
+        <Link to={`/Product_Detail/${product.id}`} style={{ textDecoration: 'none' }}>
            <Box
                 sx={{
                     border: '1px solid #ccc',
