@@ -28,10 +28,10 @@ function Product_Detail() {
                 setProduct_name(productData.name);
 
                 const imagePaths = [
-                    productData.file_path,
                     productData.file_path1,
                     productData.file_path2,
-                    productData.file_path3
+                    productData.file_path3,
+                    productData.file_path4
                 ].filter(Boolean);
 
                 setImagePath(imagePaths[0]);
@@ -96,7 +96,7 @@ function Product_Detail() {
                             </Box>
                             <Stack direction="row" spacing={2} mt={2} ml={"5%"} maxWidth={'100%'}>
                                 {thumbnails.map((thumbnail, index) => (
-                                    <Box key={index} sx={{ border: imagePath === thumbnail ? '2px solid lightblue' : '1px solid #ccc', cursor: 'pointer', overflow : "hidden" }}>
+                                    <Box key={index} sx={{ border: imagePath === thumbnail ? '2 px solid lightblue' : '1px solid #ccc', cursor: 'pointer', overflow : "hidden" }}>
                                         <img
                                             src={`http://127.0.0.1:8000/${thumbnail}`}
                                             alt={`thumbnail ${index}`}

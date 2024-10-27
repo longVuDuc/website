@@ -9,7 +9,7 @@ const ProductCard = ({ product }) => {
       };
     useEffect(() => {
         if (product) {
-            setImagePath(product.file_path);
+            setImagePath(product.file_path1);
         }
     }, [product]); 
 
