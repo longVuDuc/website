@@ -28,32 +28,6 @@ const ResponsiveAppBar = () => {
                                 23 Đ. 17/3, P. Đống Đa, Pleiku, Gia Lai 600000, Việt Nam
                             </Typography>
                         </Box>
-                        <Box display={'flex'} alignContent={"center"} mr={'5%'}>
-                            {
-                                localStorage.getItem('token')?
-                                <>
-                                <Box display="flex" alignItems="center">
-                                    <Link to="/Profile">
-                                        <PersonOutlineOutlinedIcon style={{ fontSize: '32px',color: 'black'  }} />
-                                    </Link>
-                                    <Box padding={"0 12px"}></Box>
-                                    <Link to = "/Cart">
-                                        <ShoppingCartOutlinedIcon style={{ fontSize: '32px',color: 'black'  }} />
-                                    </Link>
-                                    <Box padding={"0 32px"} fontSize={'21px'}  paddingBottom={'1px'}>|</Box>
-                                    <IconButton onClick={LogOut}>
-                                        <LogoutIcon style={{ fontSize: '30px' , color : "black" }} />
-                                    </IconButton>
-                                </Box>
-                                </>:
-                                <>
-                                    <Link to="/SignUp" style={{ color: 'inherit', textDecoration: 'none', fontSize: '14px' }} > Sign Up</Link>
-                                    <Typography padding={'0 4px'}>/</Typography>
-                                    <Link to="/LogIn " style={{ color: 'inherit', textDecoration: 'none', fontSize: '14px' }}>Log In</Link>
-                                </>
-                            }
-                           
-                        </Box>
                     </Stack>
                 </Box>
                 <Box>
@@ -64,7 +38,7 @@ const ResponsiveAppBar = () => {
             <Stack direction="row" spacing={2} alignItems="center" justifyContent="space-between" p={1.5}>
                 <Stack direction="row" spacing={3}  justifyContent="center" paddingInlineStart={'15%'}>
                     <Button color="inherit">
-                        <Link to="/Home" style={{ color: 'inherit', textDecoration: 'none', fontSize: '16px' }}>
+                        <Link to="/" style={{ color: 'inherit', textDecoration: 'none', fontSize: '16px' }}>
                             TRANG CHỦ
                         </Link>
                     </Button>
