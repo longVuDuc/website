@@ -5,6 +5,7 @@ import Product_Detail from './pages/Product_detail';
 import Mangage_product from './pages/Manage_product';
 import Login from './pages/Login';
 import SignUp from './pages/signup';
+import Dashboard from './admin/dashboard';
 function App() {
   return (
     <Router>
@@ -14,6 +15,7 @@ function App() {
         <Route path="/Mangage_product" element={<Mangage_product />} />
         <Route path="/Login" element={<Login />} />
         <Route path="/SignUp" element={<SignUp />} />
+        <Route path='/dashboard' element={<Dashboard/>}/>
       </Routes>
     </Router>
   );
