@@ -1,15 +1,15 @@
 {
     "version": 2,
+    "functions": {
+      "api/index.php": {
+        "runtime": "vercel-php@0.2.0"
+      }
+    },
     "routes": [
       {
         "src": "/(.*)",
-        "dest": "server/index.php"
+        "dest": "api/index.php"
       }
-    ],
-    "functions": {
-      "server/index.php": {
-        "runtime": "vercel-php@0.2.0"
-      }
-    }
+    ]
   }
   
